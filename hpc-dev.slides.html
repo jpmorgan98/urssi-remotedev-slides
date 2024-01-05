@@ -7440,7 +7440,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Remote-Devlopment-on-HPCs">Remote Devlopment on HPCs<a class="anchor-link" href="#Remote-Devlopment-on-HPCs">¶</a></h1><p><a href="https://jpmorgan98.github.io/">Joanna Piper Morgan</a></p>
+<h1 id="Remote-Development-on-HPCs">Remote Development on HPCs<a class="anchor-link" href="#Remote-Development-on-HPCs">¶</a></h1><p><a href="https://jpmorgan98.github.io/">Joanna Piper Morgan</a></p>
 <p>Oregon State University</p>
 </div>
 </div>
@@ -7455,9 +7455,9 @@ main {
 <h3 id="Lesson-Objectives">Lesson Objectives<a class="anchor-link" href="#Lesson-Objectives">¶</a></h3><ul>
 <li>review ssh configuring between an HPC and Github</li>
 <li>miniconda instilation and execution</li>
-<li>breif conversation about SLURM scheduler</li>
-<li>breif intro to module systems</li>
-<li>remote devlopment with VSCode!</li>
+<li>brief conversation about SLURM scheduler</li>
+<li>brief intro to module systems</li>
+<li>remote development with VSCode!</li>
 </ul>
 </div>
 </div>
@@ -7488,7 +7488,7 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="WARNING"><em>WARNING</em><a class="anchor-link" href="#WARNING">¶</a></h1><p><em>your mileage may vary</em></p>
-<p>both your project and its requiremnts/limitations and the HPC you run on will determine your experence. <em>There are no hard and fast rules</em></p>
+<p>both your project and its requirements/limitations and the HPC you run on will determine your experience. <em>There are no hard and fast rules</em></p>
 </div>
 </div>
 </div>
@@ -7511,7 +7511,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Minconda-Install">Minconda Install<a class="anchor-link" href="#Minconda-Install">¶</a></h1><p>We rarely have admin provlidges on HPCs but we still need to install and run our software and its dependencies. We could build from source (often times for compiled codes using cmake) or we could use non-sudo package managers, in python this is commonly miniconda</p>
+<h1 id="Minconda-Install">Minconda Install<a class="anchor-link" href="#Minconda-Install">¶</a></h1><p>We rarely have admin privileges on HPCs but we still need to install and run our software and its dependencies. We could build from source (often times for compiled codes using cmake) or we could use non-sudo package managers, in python this is commonly miniconda</p>
 <p><a href="https://docs.conda.io/projects/miniconda/en/latest/">Install insturctions</a></p>
 <p>Install miniconda in your root directory:</p>
 <pre><code>mkdir -p ~/miniconda3
@@ -7522,7 +7522,7 @@ rm -rf ~/miniconda3/miniconda.sh
 <p>Add miniconda to your bash/zhs scripts</p>
 <pre><code>~/miniconda3/bin/conda init bash
 </code></pre>
-<p>Other package mangers purpose built for HPCs are avaliable---<em><a href="https://spack.io/">further reading on spack</a></em></p>
+<p>Other package managers purpose-built for HPCs are available---<em><a href="https://spack.io/">further reading on spack</a></em></p>
 </div>
 </div>
 </div>
@@ -7536,10 +7536,10 @@ rm -rf ~/miniconda3/miniconda.sh
 <h1 id="SLURM">SLURM<a class="anchor-link" href="#SLURM">¶</a></h1><ul>
 <li>Launch an interactive node: <code>srun -N 1 --pty bash</code> or <code>salloc</code></li>
 <li>See the run queue: <code>squeue &lt;USER_NAME&gt;</code></li>
-<li>Cancle a Job: <code>scancel &lt;JOB_ID&gt;</code></li>
-<li>Schdule a batch script <code>sbatch &lt;BATCH_SCRIPT&gt;</code></li>
+<li>Cancel a Job: <code>scancel &lt;JOB_ID&gt;</code></li>
+<li>Schedule a batch script <code>sbatch &lt;BATCH_SCRIPT&gt;</code></li>
 </ul>
-<p>There are other batch scheulders (e.g. LSF) but most have a similar syntax</p>
+<p>There are other batch schedulers (e.g., LSF) but most have a similar syntax</p>
 </div>
 </div>
 </div>
@@ -7552,7 +7552,7 @@ rm -rf ~/miniconda3/miniconda.sh
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Module-Systems">Module Systems<a class="anchor-link" href="#Module-Systems">¶</a></h1><p>HPCs often have wayyyyyyyy more installed code than you need</p>
 <p>modules simplify this by altering your path to configured packages</p>
-<p>often this is for copmilers (e.g. clang, gcc, cuda, etc.)</p>
+<p>often this is for compilers (e.g., clang, gcc, cuda)</p>
 </div>
 </div>
 </div>
@@ -7564,7 +7564,7 @@ rm -rf ~/miniconda3/miniconda.sh
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Remote-work-with-VSCode">Remote work with VSCode<a class="anchor-link" href="#Remote-work-with-VSCode">¶</a></h1><p>while vim and emacs exist---why drive a chevy when you can drive a cadillac?</p>
-<p>support for any file under the sun, scp/ftp abilities, file browsing, multi-terminal functinoalities etc. etc.</p>
+<p>support for any file under the sun, scp/ftp abilities, file browsing, multi-terminal functionalities, etc. etc.</p>
 <p><em>note: is not supported in IBM POWER9 systems</em></p>
 </div>
 </div>
