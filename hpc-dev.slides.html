@@ -7453,11 +7453,11 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Lesson-Objectives">Lesson Objectives<a class="anchor-link" href="#Lesson-Objectives">¶</a></h3><ul>
-<li>Review ssh configuring between an HPC and Github</li>
-<li>Miniconda instilation and execution</li>
-<li>Breif conversation about SLURM scheduler</li>
-<li>Breif intro to module systems</li>
-<li>Remote devlopment with VSCode!</li>
+<li>review ssh configuring between an HPC and Github</li>
+<li>miniconda instilation and execution</li>
+<li>breif conversation about SLURM scheduler</li>
+<li>breif intro to module systems</li>
+<li>remote devlopment with VSCode!</li>
 </ul>
 </div>
 </div>
@@ -7469,14 +7469,14 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Some-Links">Some Links<a class="anchor-link" href="#Some-Links">¶</a></h1><p>These will be included in the useful links document as well:</p>
+<h1 id="Some-Links">Some Links<a class="anchor-link" href="#Some-Links">¶</a></h1><p>these will be included in the useful links document as well:</p>
 <ul>
 <li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">How to set up SSH keys</a></li>
 <li><a href="https://bioinformaticsworkbook.org/Appendix/HPC/SLURM/slurm-cheatsheat.html#gsc.tab=0">SLURM cheat sheet</a></li>
 <li><a href="https://statistics.berkeley.edu/computing/conda">Miniconda v Conda v Mamba</a></li>
 <li><a href="https://hpc-wiki.info/hpc/Modules">Module systems</a></li>
 </ul>
-<p>Ask help from your HPC admins!!!!!</p>
+<p>ask help from your HPC admins!!!!!</p>
 </div>
 </div>
 </div>
@@ -7487,9 +7487,8 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="WARNING">WARNING<a class="anchor-link" href="#WARNING">¶</a></h1><p><em>your mileage may vary</em></p>
-<p>Both your project and its requiremnts/limitations and the HPC you run on will determine your experence. <em>there are no hard and fast rules</em></p>
-<p>Between CPU arcetectures (x86, ARM64, POWER9, etc.), distributed memory parallelism (MPI), shared memory parallelism APIs (OpenMP, Pthreads), GPU Archetectures/APIs (Nvidia CUDA, AMD HIP, Intel SYCL, Apple Silicon), compiler toolchains (clang, gcc, cuda, Intel compilers, PGI, etc.) and whatever else will complicate this</p>
+<h1 id="WARNING"><em>WARNING</em><a class="anchor-link" href="#WARNING">¶</a></h1><p><em>your mileage may vary</em></p>
+<p>both your project and its requiremnts/limitations and the HPC you run on will determine your experence. <em>There are no hard and fast rules</em></p>
 </div>
 </div>
 </div>
@@ -7500,7 +7499,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="SSH-Keys-in-Github">SSH Keys in Github<a class="anchor-link" href="#SSH-Keys-in-Github">¶</a></h1><p>Gotta have em:</p>
+<h1 id="SSH-Keys-in-Github">SSH Keys in Github<a class="anchor-link" href="#SSH-Keys-in-Github">¶</a></h1><p>gotta have em:</p>
 <p>cus I always forget: <code>ssh-keygen -t ed25519</code></p>
 </div>
 </div>
@@ -7523,7 +7522,7 @@ rm -rf ~/miniconda3/miniconda.sh
 <p>Add miniconda to your bash/zhs scripts</p>
 <pre><code>~/miniconda3/bin/conda init bash
 </code></pre>
-<p><em><a href="https://spack.io/">further reading on spack</a></em></p>
+<p>Other package mangers purpose built for HPCs are avaliable---<em><a href="https://spack.io/">further reading on spack</a></em></p>
 </div>
 </div>
 </div>
@@ -7535,10 +7534,10 @@ rm -rf ~/miniconda3/miniconda.sh
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="SLURM">SLURM<a class="anchor-link" href="#SLURM">¶</a></h1><ul>
-<li>Launch an interactive node: <code>srun -N 1 --pty bash</code></li>
+<li>Launch an interactive node: <code>srun -N 1 --pty bash</code> or <code>salloc</code></li>
 <li>See the run queue: <code>squeue &lt;USER_NAME&gt;</code></li>
-<li>Cancle a Job: <code>scancel</code></li>
-<li>Schdule a batch script <code>bsub &lt;BATCH_SCRIPT&gt;</code></li>
+<li>Cancle a Job: <code>scancel &lt;JOB_ID&gt;</code></li>
+<li>Schdule a batch script <code>sbatch &lt;BATCH_SCRIPT&gt;</code></li>
 </ul>
 <p>There are other batch scheulders (e.g. LSF) but most have a similar syntax</p>
 </div>
@@ -7557,7 +7556,7 @@ rm -rf ~/miniconda3/miniconda.sh
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a2fdc55d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
